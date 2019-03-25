@@ -41,6 +41,10 @@ router.post('/github', function(req, res) {
 
 clear()
 console.log(chalk.red(figlet.textSync('github to redis', {horizontalLayout: 'full'})))
+console.log(chalk.red('Redis Host: ' + conf.redisHost))
+console.log(chalk.red('Redis Port: ' + conf.redisPort))
+console.log(chalk.red('Queue Name: ' + conf.queueName))
+console.log(chalk.red('Web Port: ' + conf.webPort))
 
 app.listen(conf.webPort, function() {
   console.log(chalk.yellow('Listening on port: ' + conf.webPort))
